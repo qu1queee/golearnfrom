@@ -49,7 +49,7 @@ func (p *Profile) TopPatterns(n int) []string {
 		id    string
 		count int
 	}
-	var pairs []kv
+	pairs := make([]kv, 0, len(p.PatternCount))
 	for id, c := range p.PatternCount {
 		pairs = append(pairs, kv{id, c})
 	}

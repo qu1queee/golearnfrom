@@ -5,14 +5,12 @@ linters:
     - bodyclose       # HTTP response bodies must be closed
     - errcheck        # unchecked errors
     - gosec           # security issues
-    - gosimple        # simplification opportunities
     - govet           # suspicious constructs
     - ineffassign     # assignments with no effect
     - misspell        # spelling mistakes in comments and strings
     - noctx           # HTTP requests sent without context.Context
     - prealloc        # slice declarations that could be preallocated
-    - staticcheck     # static analysis
-    - unused          # unused code
+    - staticcheck     # static analysis (includes gosimple and unused)
 
 linters-settings:
   gosec:

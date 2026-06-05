@@ -73,11 +73,10 @@ func userCmd() *cobra.Command {
 			case outputJSON:
 				return report.PrintJSON(os.Stdout, p)
 			case outputPrompt:
-				report.PrintPrompt(os.Stdout, p, snippetLimit)
+				return report.PrintPrompt(os.Stdout, p, snippetLimit)
 			default:
-				report.PrintProfile(os.Stdout, p, snippetLimit)
+				return report.PrintProfile(os.Stdout, p, snippetLimit)
 			}
-			return nil
 		},
 	}
 

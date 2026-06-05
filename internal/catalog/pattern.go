@@ -33,7 +33,7 @@ type Pattern struct {
 
 // All returns every pattern in the catalog.
 func All() []*Pattern {
-	var out []*Pattern
+	out := make([]*Pattern, 0, len(algorithms)+len(datastructures)+len(concurrency)+len(idioms))
 	out = append(out, algorithms...)
 	out = append(out, datastructures...)
 	out = append(out, concurrency...)
