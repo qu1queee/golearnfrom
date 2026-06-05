@@ -1,5 +1,7 @@
 # glean
 
+![golearnfrom](logo-golearnfrom.svg)
+
 Learn Go by studying how experienced developers write it.
 
 ## What

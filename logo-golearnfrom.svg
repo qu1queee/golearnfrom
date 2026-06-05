@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+
+    <!-- Red band with gold stars (26×26 tile) -->
+    <pattern id="starband" x="0" y="0" width="26" height="26" patternUnits="userSpaceOnUse">
+      <rect width="26" height="26" fill="#C41E3A"/>
+      <polygon points="13,3 15.4,9.8 22.5,9.9 16.8,14.2 18.9,21.1 13,17 7.1,21.1 9.2,14.2 3.5,9.9 10.6,9.8"
+               fill="#FFD700" stroke="#1A0A00" stroke-width="0.4"/>
+    </pattern>
+
+    <!-- Open book (pages spread, spine at origin bottom) -->
+    <g id="bk">
+      <path d="M 0,0 L -22,0 L -22,-30 Q -11,-33 0,-28 Z"
+            fill="#FFF8E1" stroke="#1A0A00" stroke-width="1.2"/>
+      <path d="M 0,0 L  22,0 L  22,-30 Q  11,-33 0,-28 Z"
+            fill="#FFFDE7" stroke="#1A0A00" stroke-width="1.2"/>
+      <line x1="0" y1="0" x2="0" y2="-28" stroke="#5D4037" stroke-width="1.8"/>
+      <line x1="-18" y1="-8"  x2="-4" y2="-7"  stroke="#90A4AE" stroke-width="0.9"/>
+      <line x1="-18" y1="-14" x2="-4" y2="-13" stroke="#90A4AE" stroke-width="0.9"/>
+      <line x1="-18" y1="-20" x2="-4" y2="-19" stroke="#90A4AE" stroke-width="0.9"/>
+      <line x1="4"  y1="-8"  x2="18" y2="-8"  stroke="#90A4AE" stroke-width="0.9"/>
+      <line x1="4"  y1="-14" x2="18" y2="-14" stroke="#90A4AE" stroke-width="0.9"/>
+      <line x1="4"  y1="-20" x2="18" y2="-20" stroke="#90A4AE" stroke-width="0.9"/>
+    </g>
+
+  </defs>
+
+  <!-- ════ BACKGROUND ════ -->
+  <rect width="800" height="300" fill="#FFF5DC"/>
+
+  <!-- ════ BORDER BANDS (red with gold stars) ════ -->
+  <rect x="3"   y="3"   width="794" height="27" fill="url(#starband)"/>
+  <rect x="3"   y="270" width="794" height="27" fill="url(#starband)"/>
+  <rect x="3"   y="30"  width="27"  height="240" fill="url(#starband)"/>
+  <rect x="770" y="30"  width="27"  height="240" fill="url(#starband)"/>
+
+  <!-- ════ FRAME LINES ════ -->
+  <rect x="3"   y="3"   width="794" height="294" rx="3" fill="none" stroke="#1A0A00" stroke-width="3.5"/>
+  <rect x="33"  y="33"  width="734" height="234" fill="none" stroke="#1A0A00" stroke-width="1.5"/>
+  <rect x="37"  y="37"  width="726" height="226" fill="none" stroke="#00ADD8" stroke-width="0.8"/>
+
+  <!-- ════ CORNER STARS (large) ════ -->
+  <polygon transform="translate(16,16)"
+    points="0,-12 2.8,-3.7 11.4,-3.7 4.6,1.4 7.0,9.7 0,4.9 -7,9.7 -4.6,1.4 -11.4,-3.7 -2.8,-3.7"
+    fill="#FFD700" stroke="#1A0A00" stroke-width="0.8"/>
+  <polygon transform="translate(784,16)"
+    points="0,-12 2.8,-3.7 11.4,-3.7 4.6,1.4 7.0,9.7 0,4.9 -7,9.7 -4.6,1.4 -11.4,-3.7 -2.8,-3.7"
+    fill="#FFD700" stroke="#1A0A00" stroke-width="0.8"/>
+  <polygon transform="translate(16,284)"
+    points="0,-12 2.8,-3.7 11.4,-3.7 4.6,1.4 7.0,9.7 0,4.9 -7,9.7 -4.6,1.4 -11.4,-3.7 -2.8,-3.7"
+    fill="#FFD700" stroke="#1A0A00" stroke-width="0.8"/>
+  <polygon transform="translate(784,284)"
+    points="0,-12 2.8,-3.7 11.4,-3.7 4.6,1.4 7.0,9.7 0,4.9 -7,9.7 -4.6,1.4 -11.4,-3.7 -2.8,-3.7"
+    fill="#FFD700" stroke="#1A0A00" stroke-width="0.8"/>
+
+  <!-- ════ SCATTERED GO-THEMED ACCENTS (background decoration) ════ -->
+  <text x="85" y="118" font-family="monospace" font-size="32" fill="#00ADD8" opacity="0.38" transform="rotate(-10,85,118)">{</text>
+  <text x="682" y="118" font-family="monospace" font-size="32" fill="#00ADD8" opacity="0.38" transform="rotate(10,682,118)">}</text>
+  <text x="112" y="178" font-family="monospace" font-size="20" fill="#1A0A00" opacity="0.30" transform="rotate(7,112,178)">&lt;-</text>
+  <text x="648" y="178" font-family="monospace" font-size="20" fill="#1A0A00" opacity="0.30" transform="rotate(-7,648,178)">:=</text>
+  <text x="195" y="82" font-family="serif" font-size="18" fill="#FFD700" opacity="0.70" transform="rotate(-5,195,82)">★</text>
+  <text x="575" y="80" font-family="serif" font-size="18" fill="#FFD700" opacity="0.70" transform="rotate(6,575,80)">★</text>
+  <text x="110" y="232" font-family="monospace" font-size="15" fill="#00ADD8" opacity="0.40" transform="rotate(12,110,232)">go</text>
+  <text x="655" y="230" font-family="monospace" font-size="15" fill="#00ADD8" opacity="0.40" transform="rotate(-11,655,230)">go</text>
+
+  <!-- ════ FLANKING OPEN BOOKS ════ -->
+  <use href="#bk" transform="translate(308,200)"/>
+  <use href="#bk" transform="translate(492,200)"/>
+
+  <!-- ════ CENTRAL GOPHER FACE ════ -->
+  <!-- Ears (behind head) -->
+  <ellipse cx="362" cy="103" rx="15" ry="19" fill="#00ADD8" stroke="#1A0A00" stroke-width="1.8"/>
+  <ellipse cx="362" cy="103" rx="8"  ry="12" fill="#F8BBD0"/>
+  <ellipse cx="438" cy="103" rx="15" ry="19" fill="#00ADD8" stroke="#1A0A00" stroke-width="1.8"/>
+  <ellipse cx="438" cy="103" rx="8"  ry="12" fill="#F8BBD0"/>
+
+  <!-- Head -->
+  <ellipse cx="400" cy="148" rx="54" ry="57" fill="#00ADD8" stroke="#1A0A00" stroke-width="2.2"/>
+
+  <!-- Snout/face plate -->
+  <ellipse cx="400" cy="158" rx="33" ry="27" fill="#E0F7FA" stroke="#1A0A00" stroke-width="1.3"/>
+
+  <!-- Eye whites -->
+  <ellipse cx="383" cy="133" rx="12" ry="14" fill="white" stroke="#1A0A00" stroke-width="1.3"/>
+  <ellipse cx="417" cy="133" rx="12" ry="14" fill="white" stroke="#1A0A00" stroke-width="1.3"/>
+
+  <!-- Pupils -->
+  <ellipse cx="384" cy="134" rx="6" ry="7" fill="#1A0A00"/>
+  <ellipse cx="418" cy="134" rx="6" ry="7" fill="#1A0A00"/>
+
+  <!-- Eye shine -->
+  <circle cx="386" cy="131" r="2.2" fill="white"/>
+  <circle cx="420" cy="131" r="2.2" fill="white"/>
+
+  <!-- Nose -->
+  <ellipse cx="400" cy="152" rx="5" ry="4" fill="#1A0A00"/>
+
+  <!-- Smile -->
+  <path d="M 387,163 Q 400,174 413,163"
+        fill="none" stroke="#1A0A00" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Teeth -->
+  <rect x="394" y="163" width="5.5" height="8" rx="1.2" fill="white" stroke="#1A0A00" stroke-width="0.9"/>
+  <rect x="400.5" y="163" width="5.5" height="8" rx="1.2" fill="white" stroke="#1A0A00" stroke-width="0.9"/>
+
+  <!-- ════ SMALL STAR ACCENTS AROUND GOPHER ════ -->
+  <polygon transform="translate(336,100)"
+    points="0,-8 1.9,-2.5 7.6,-2.5 3.1,1 4.7,6.5 0,3.3 -4.7,6.5 -3.1,1 -7.6,-2.5 -1.9,-2.5"
+    fill="#FFD700" stroke="#1A0A00" stroke-width="0.5"/>
+  <polygon transform="translate(464,98)"
+    points="0,-8 1.9,-2.5 7.6,-2.5 3.1,1 4.7,6.5 0,3.3 -4.7,6.5 -3.1,1 -7.6,-2.5 -1.9,-2.5"
+    fill="#FFD700" stroke="#1A0A00" stroke-width="0.5"/>
+  <polygon transform="translate(400,63)"
+    points="0,-9 2.2,-2.8 8.6,-2.8 3.5,1.1 5.3,7.3 0,3.7 -5.3,7.3 -3.5,1.1 -8.6,-2.8 -2.2,-2.8"
+    fill="#FFD700" stroke="#1A0A00" stroke-width="0.5"/>
+
+  <!-- ════ RIBBON BANNER ════ -->
+  <!-- Left fold (dark red triangle) -->
+  <polygon points="118,232 93,251 118,270" fill="#8B0000" stroke="#1A0A00" stroke-width="1.5"/>
+  <!-- Right fold -->
+  <polygon points="682,232 707,251 682,270" fill="#8B0000" stroke="#1A0A00" stroke-width="1.5"/>
+  <!-- Banner body -->
+  <rect x="118" y="232" width="564" height="38" rx="4" fill="#C41E3A" stroke="#1A0A00" stroke-width="2"/>
+  <!-- Small gold lines inside banner -->
+  <line x1="122" y1="237" x2="678" y2="237" stroke="#FFD700" stroke-width="0.8" opacity="0.6"/>
+  <line x1="122" y1="266" x2="678" y2="266" stroke="#FFD700" stroke-width="0.8" opacity="0.6"/>
+  <!-- Banner text -->
+  <text x="400" y="256"
+        font-family="'Arial Black', 'Impact', sans-serif"
+        font-size="22"
+        font-weight="900"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        letter-spacing="8"
+        fill="#FFD700"
+        stroke="#1A0A00"
+        stroke-width="1.2"
+        paint-order="stroke fill">GOLEARNFROM</text>
+
+</svg>
